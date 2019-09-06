@@ -1,0 +1,43 @@
+import RPi.GPIO as GPIO
+from gpiozero import Buzzer
+from time import sleep
+
+#from gpiozero import Buzzer
+#import time
+#from time import sleep
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(18, GPIO.OUT)
+
+buzzer = Buzzer(21)
+
+print "LED on"
+GPIO.output(18, GPIO.HIGH)
+
+#buzzer = Buzzer(11)
+#i = 0
+
+#while (i < 10)
+#    buzzer.on()
+#    sleep(1)
+#    buzzer.off()
+#    sleep(1)
+#    i = i + 1
+
+#while(1):
+
+ #   time.sleep(1)
+buzzer.on()
+sleep(.25)
+buzzer.off()
+sleep(.1)
+buzzer.on()
+sleep(.25)
+buzzer.off()
+
+while True:
+    buzzer.off()
+
+#print "LED off"
+#GPIO.output(18, GPIO.LOW)
